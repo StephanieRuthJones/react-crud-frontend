@@ -188,11 +188,13 @@ Data is passed from a component higher in the app hierarchy to a child component
 
 <li>Add an empty favoriteDogs array to state in the App component.</li>
 
-<li>Create an addDog function that adds a dog object to state.</li> 
+<li>Create an addDog function that adds the selected dog object to a favoriteDogs array in state.</li> 
 
 *Remember: Functions that CHANGE state have to live where state lives*
 
 <li>Pass the addDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
+
+<li>Create onClick event listener that calls addDog function (adds selected dog to state).</li>
 
 <li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
 
