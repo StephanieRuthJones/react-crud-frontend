@@ -26,17 +26,6 @@
 
 * Delete a dog from the adoptable dogs list by clicking a button
 
-**Wireframe for Dog Adoption Central:**
-
-<details>
-<summary>SEE WIREFRAME</summary>
-<p>
-
-![App Wireframe Image](/readme-images/dog-adoption-app-wireframe.png)
-
-</p>
-</details>
-
 **Dog Adoption Central Component List**
 
 * App.js
@@ -47,26 +36,23 @@
 * DogCard.js
 * AddDogForm.js
 
-**Based on the wireframe and component list above, draw a component tree to determine the structure of this Dog Adoption app, as well as where state will be held and how props will be passed**
+**Based on the component list above, draw a component tree to determine the structure of this Dog Adoption app, as well as where state will be held and how props will be passed. Have an instructor or peer approve/correct your hierarchy.**
 
-<details><summary>CLICK ME TO COMPARE APP TREE TO YOUR OWN</summary>
-<p>
+<details><summary>Show Component Hierarchy</summary>
+    <img src="images/componenthierarchy.png">
+</details>
 
-<details><summary>Where is state typically held?</summary>
+<details>
+<summary>Where is state typically held?</summary>
 <p>
 
 In the highest common component.
 
-In the case of this app, App.js will hold state, as it is the parent to the other components who need access to data in state as props.
+In the case of this app, App.js will hold state, as it is the parent to the other components that need access to data in state as props.
 
-Keep in mind: not all apps need to hold state in App.js. An app's individual component structure dictates where the single source of truth should live.
+Keep in mind: Not all apps need to hold state in App.js. An app's unique component structure dictates where the single source of truth should live.
 
-In larger apps, state management tools such as Redux are used as state containers.
-
-</p>
-</details>
-
-![App Structure Tree](/readme-images/app-structure-tree.png)
+In larger apps, state management tools such as Redux are often used as state containers.
 
 </p>
 </details>
@@ -92,9 +78,7 @@ Stateful components must be class components.
 
 2. Fetch data from `https://dogs-backend.herokuapp.com/dogs` and put returned data in state.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
+
 
 <details>
 <summary>Why is the GET request inside the ComponentDidMount() lifecycle method? Use React docs and google to answer this question.</summary>
@@ -105,33 +89,16 @@ componentDidMount is called once the component has been rendered in the browser.
 </p>
 </details>
 
-![App.js w/ GET request](/readme-images/app-image.png)
-
-</p>
-</details>
-
 3. Set up all components as functional, put an h1 tag in each of them that contains the name of the component, then import App.js' child components
-
-<details><summary>SHOW CODE</summary>
-<p>
-
-![App.js w/ Components Imported](/readme-images/app-components-import.png)
-![Example of One Functional Component w/ h2](/readme-images/example-functional-component.png)
-
-</p>
-</details>
 
 4. Put the name of this app in an h1 tag in the Header component. Give it a className of "header". Make sure it renders in the UI.
 
-<details><summary>SHOW CODE</summary>
-<p>
-
-![Header.js Component Code](/readme-images/header-component.png)
-
-</p>
-</details>
-
 5. If you haven't already, start your app in the browser and make sure all components render without errors.
+
+<details><summary>SHOW CODE</summary>
+    <img src="images/part1.png">
+    <img src="images/examplePart1Component.png">
+</details>
 
 ## PART II ##
 
@@ -143,10 +110,6 @@ componentDidMount is called once the component has been rendered in the browser.
 
 4. Render DogCards in the Adoptable Dogs section in the browser.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
 <details><summary>What is prop drilling?</summary>
 <p>
 
@@ -157,23 +120,14 @@ Data is passed from a component higher in the app hierarchy to a child component
 </p>
 </details>
 
-![Pass Props to AdoptableDogs.js](/readme-images/pass-props-adoptabledogs.png)
-![AdoptableDogs.js w/ Map](/readme-images/adoptable-dogs-component.png)
-
-</p>
-</details>
-
 5. Create an HTML card in the DogCard component. It should be wrapped by a div with the className "dog-card". The dog-card div should have two children: (1) An img tag that displays the dog's image and (2) a div with the className "dog-specs". 
 
 6. The dog-specs div has two children: (1) h4 tag that displays the dog's name and (2) a p tag that displays the dog's breed.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
-![Pass Props to AdoptableDogs.js](/readme-images/dog-card-component.png)
-
-</p>
+<details><summary>SHOW CODE</summary>
+    <img src="images/appPart2.png">
+    <img src="images/adoptableDogsPart2.png">
+    <img src="images/dogCardPart2.png">
 </details>
 
 ## PART III ## 
@@ -181,30 +135,24 @@ Data is passed from a component higher in the app hierarchy to a child component
 1. Add the following functionality: Clicking on a DogCard in the AdoptableDogs component adds it to FavoriteDogs component.
 
 <details>
-<summary>SHOW CODE</summary>
+<summary>SHOW DETAILED DIRECTIONS</summary>
 <p>
 
 <ol>
 
-<li>Add an empty favoriteDogs array to state in the App component.</li>
+    <li>Add an empty favoriteDogs array to state in the App component.</li>
 
-<li>Create an addDog function that adds the selected dog object to a favoriteDogs array in state.</li> 
+    <li>Create an addFavoriteDog function that adds a dog object to state.</li> 
 
-*Remember: Functions that CHANGE state have to live where state lives*
+    *Remember: Functions that CHANGE state have to live where state lives*
 
-<li>Pass the addDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
+    <li>Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
 
-<li>Create onClick event listener that calls addDog function (adds selected dog to state).</li>
+    <li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
 
-<li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
-
-<li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
+    <li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
 
 </ol>
-
-![App.js](/readme-images/app-component-new-state.png)
-
-![FavoriteDogs.js](/readme-images/favorite-dogs-with-props.png)
 
 </p>
 </details>
@@ -212,20 +160,14 @@ Data is passed from a component higher in the app hierarchy to a child component
 2. Ensure that once a dog is added to the FavoriteDogs component, it cannot be added again.
 
 <details><summary>SHOW CODE</summary>
-<p>
-
-![addDog-fn](/readme-images/addDog-filter.png)
-
-</p>
+    <img src="images/appPart2.png">
+    <img src="images/adoptableDogsPart2.png">
+    <img src="images/dogCardPart2.png">
 </details>
 
 ## PART IV ##
 
 1. Add the following functionality: Clicking on a DogCard in the FavoriteDogs removes it from that component.
-
-<details>
-<summary>SHOW CODE</summary>
-<p>
 
 <details><summary>TRUE / FALSE: Two different functions can be given the same prop name when passed to child components.</summary>
 <p>
@@ -247,10 +189,6 @@ TRUE: You can give two different props the same name even if they reference diff
 
 </ol>
 
-![App.js](/readme-images/app-with-remove.png)
-
-![App.js](/readme-images/adoptable-dogs-new-props.png)
-
 </p>
 </details>
 
@@ -259,7 +197,7 @@ TRUE: You can give two different props the same name even if they reference diff
 1. Add functionality to SearchBar component: Typing in a form allows user to search by breed.
 
 <details>
-<summary>SHOW CODE</summary>
+<summary>SHOW DETAILED INSTRUCTIONS</summary>
 <p>
 
 <ol>
@@ -292,10 +230,6 @@ In the App component, write a function called updateSearchTerm that takes in a s
 
 </ol>
 
-![SearchBar.js](/readme-images/search-bar.png)
-
-![App.js](/readme-images/app-with-search.png)
-
 </p>
 </details>
 
@@ -322,15 +256,6 @@ Controlled forms: Input values are set to state values, then updated via events.
 
 4. Give first three inputs a value that references corresponding information AddDogForm state.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
-![AddDogForm.js](/readme-images/add-dog-form-1.png)
-
-</p>
-</details>
-
 5. In the appropriate component, add an addAdoptableDog function that POSTs form data to the backend.
 
 6. Pass as props to the appropriate component.
@@ -348,31 +273,14 @@ The opposite is *optimistic rendering*, which renders the page with updated info
 </p>
 </details>
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
-![addAdoptableDog](/readme-images/addAdoptableDog_function.png)
-
-</p>
-</details>
-
 8. Add an onSubmit handler to the AddDogForm component. The onSubmit should reference a submitHandler function that calls the addAdoptableDog function, then resets state to its original empty values.
 
-<details>
-<summary>SEE CODE</summary>
-<p>
-
-![AddDogForm.js](/readme-images/AddDogForm-submit-handleChange.png)
 
 <details>
 <summary>Why do we need event.preventDefault() in the submitHandler function?</summary>
 <p>
 
 This prevents the default submit action of reloading the webpage.
-</p>
-</details>
-
 </p>
 </details>
 
@@ -383,15 +291,6 @@ This prevents the default submit action of reloading the webpage.
 2. This function should delete a selected dog from the backend.
 
 3. Optimistically render the new array of adoptable dogs without the deleted dog.
-
-<details>
-<summary>SEE CODE</summary>
-<p>
-
-![App.js](/readme-images/deleteDog-fn.png)
-
-</p>
-</details>
 
 ## PART VIII ##
 

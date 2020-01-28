@@ -1,30 +1,13 @@
 import React from 'react'
 
-const DogCard = (props) => {
-    const { dog } = props
-
-    const handleClick = () => {
-        props.dogAction(dog)
-    }
-
-    const deleteDog = () => {
-        props.deleteDog(dog)
-    }
-
+export const DogCard = ({ dog }) => {
     return (
-        <div className="dog-card"
-            onClick={handleClick}
-        >
-            <img src={dog.image} alt={dog.name} />
+        <div className="dog-card">
+            <img src={dog.image} alt="dog" />
             <div className="dog-specs">
-                <h4><b>{dog.name}</b></h4>
-                <p>Breed: {dog.breed}</p>
-                <p>Age: {dog.age}</p>
-                <button onClick={deleteDog}>DELETE</button>
+                <h4>{dog.name}</h4>
+                <p>{dog.breed}</p>
             </div>
         </div>
-
     )
 }
-
-export default DogCard

@@ -1,22 +1,7 @@
+import React from 'react'
 
-import React from "react"
-
-const SearchBar = (props) => {
-
-    const updateSearchTerm = event => {
-        props.updateSearchTerm(event.target.value)
-    }
-
+export const SearchBar = () => {
     return (
-        <form className="dog-filter">
-            <input
-                type="text"
-                value={props.searchTerm}
-                placeholder="Find Adoptable Dog"
-                onChange={updateSearchTerm}
-            />
-        </form>
+        <h1>SearchBar</h1>
     )
 }
-
-export default SearchBar
