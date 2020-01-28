@@ -1,7 +1,13 @@
 import React from 'react'
 
-export const DogCard = () => {
+export const DogCard = ({ dog }) => {
     return (
-        <h1>DogCard</h1>
+        <div className="dog-card">
+            <img src={dog.image} alt="dog" />
+            <div className="dog-specs">
+                <h4>{dog.name}</h4>
+                <p>{dog.breed}</p>
+            </div>
+        </div>
     )
 }

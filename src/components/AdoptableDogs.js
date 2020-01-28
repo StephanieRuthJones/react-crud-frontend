@@ -1,7 +1,14 @@
 import React from 'react'
+import { DogCard } from './DogCard'
 
-export const AdoptableDogs = () => {
+export const AdoptableDogs = ({ dogs }) => {
+    const dogCards = dogs.map(dog => {
+        return <DogCard key={dog.id} dog={dog} />
+    })
     return (
-        <h1>AdoptableDogs</h1>
+        <div>
+            <h1>AdoptableDogs</h1>
+            {dogCards}
+        </div>
     )
 }

@@ -17,11 +17,12 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.dogs)
     return (
       <div>
         <Header />
         <FavoriteDogs />
-        <AdoptableDogs />
+        <AdoptableDogs dogs={this.state.dogs} />
       </div>
     )
   }

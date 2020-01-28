@@ -5,3 +5,4 @@ export const DogSpec = () => {
         <h1>DogSpec</h1>
     )
 }
+

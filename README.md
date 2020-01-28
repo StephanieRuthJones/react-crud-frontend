@@ -95,7 +95,7 @@ componentDidMount is called once the component has been rendered in the browser.
 
 5. If you haven't already, start your app in the browser and make sure all components render without errors.
 
-<details><summary>Show Component Hierarchy</summary>
+<details><summary>SHOW CODE</summary>
     <img src="images/part1.png">
     <img src="images/examplePart1Component.png">
 </details>
@@ -123,6 +123,12 @@ Data is passed from a component higher in the app hierarchy to a child component
 5. Create an HTML card in the DogCard component. It should be wrapped by a div with the className "dog-card". The dog-card div should have two children: (1) An img tag that displays the dog's image and (2) a div with the className "dog-specs". 
 
 6. The dog-specs div has two children: (1) h4 tag that displays the dog's name and (2) a p tag that displays the dog's breed.
+
+<details><summary>SHOW CODE</summary>
+    <img src="images/appPart2.png">
+    <img src="images/adoptableDogsPart2.png">
+    <img src="images/dogCardPart2.png">
+</details>
 
 ## PART III ## 
 
