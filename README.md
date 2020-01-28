@@ -39,9 +39,10 @@
 **Based on the component list above, draw a component tree to determine the structure of this Dog Adoption app, as well as where state will be held and how props will be passed. Have an instructor or peer approve/correct your hierarchy.**
 
 <details><summary>Show Component Hierarchy</summary>
-<p>
-<img src="readme-images/componenthierarchy.png">
-</p>
+    <p>
+        <img src="readme-images/componenthierarchy.png">
+        ![Component Hierarchy](readme-images/componenthierarchy.png)
+    </p>
 </details>
 
 <details><summary>Where is state typically held?</summary>
