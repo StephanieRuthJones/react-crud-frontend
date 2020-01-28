@@ -40,7 +40,7 @@
 
 <details><summary>Show Component Hierarchy</summary>
 
-        ![](/images/componenthierarchy.png)
+        ![](componenthierarchy.png)
 
 </details>
 
