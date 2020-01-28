@@ -26,17 +26,6 @@
 
 * Delete a dog from the adoptable dogs list by clicking a button
 
-**Wireframe for Dog Adoption Central:**
-
-<details>
-<summary>SEE WIREFRAME</summary>
-<p>
-
-![App Wireframe Image](/readme-images/dog-adoption-app-wireframe.png)
-
-</p>
-</details>
-
 **Dog Adoption Central Component List**
 
 * App.js
@@ -47,10 +36,7 @@
 * DogCard.js
 * AddDogForm.js
 
-**Based on the wireframe and component list above, draw a component tree to determine the structure of this Dog Adoption app, as well as where state will be held and how props will be passed**
-
-<details><summary>CLICK ME TO COMPARE APP TREE TO YOUR OWN</summary>
-<p>
+**Based on the component list above, draw a component tree to determine the structure of this Dog Adoption app, as well as where state will be held and how props will be passed**
 
 <details><summary>Where is state typically held?</summary>
 <p>
@@ -62,11 +48,6 @@ In the case of this app, App.js will hold state, as it is the parent to the othe
 Keep in mind: Not all apps need to hold state in App.js. An app's unique component structure dictates where the single source of truth should live.
 
 In larger apps, state management tools such as Redux are used as state containers.
-
-</p>
-</details>
-
-![App Structure Tree](/readme-images/app-structure-tree.png)
 
 </p>
 </details>
@@ -92,9 +73,7 @@ Stateful components must be class components.
 
 2. Fetch data from `https://dogs-backend.herokuapp.com/dogs` and put returned data in state.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
+
 
 <details>
 <summary>Why is the GET request inside the ComponentDidMount() lifecycle method? Use React docs and google to answer this question.</summary>
@@ -105,31 +84,9 @@ componentDidMount is called once the component has been rendered in the browser.
 </p>
 </details>
 
-![App.js w/ GET request](/readme-images/app-image.png)
-
-</p>
-</details>
-
 3. Set up all components as functional, put an h1 tag in each of them that contains the name of the component, then import App.js' child components
 
-<details><summary>SHOW CODE</summary>
-<p>
-
-![App.js w/ Components Imported](/readme-images/app-components-import.png)
-![Example of One Functional Component w/ h2](/readme-images/example-functional-component.png)
-
-</p>
-</details>
-
 4. Put the name of this app in an h1 tag in the Header component. Give it a className of "header". Make sure it renders in the UI.
-
-<details><summary>SHOW CODE</summary>
-<p>
-
-![Header.js Component Code](/readme-images/header-component.png)
-
-</p>
-</details>
 
 5. If you haven't already, start your app in the browser and make sure all components render without errors.
 
@@ -143,9 +100,7 @@ componentDidMount is called once the component has been rendered in the browser.
 
 4. Render DogCards in the Adoptable Dogs section in the browser.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
+
 
 <details><summary>What is prop drilling?</summary>
 <p>
@@ -157,31 +112,16 @@ Data is passed from a component higher in the app hierarchy to a child component
 </p>
 </details>
 
-![Pass Props to AdoptableDogs.js](/readme-images/pass-props-adoptabledogs.png)
-![AdoptableDogs.js w/ Map](/readme-images/adoptable-dogs-component.png)
-
-</p>
-</details>
-
 5. Create an HTML card in the DogCard component. It should be wrapped by a div with the className "dog-card". The dog-card div should have two children: (1) An img tag that displays the dog's image and (2) a div with the className "dog-specs". 
 
 6. The dog-specs div has two children: (1) h4 tag that displays the dog's name and (2) a p tag that displays the dog's breed.
-
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
-![Pass Props to AdoptableDogs.js](/readme-images/dog-card-component.png)
-
-</p>
-</details>
 
 ## PART III ## 
 
 1. Add the following functionality: Clicking on a DogCard in the AdoptableDogs component adds it to FavoriteDogs component.
 
 <details>
-<summary>SHOW CODE</summary>
+<summary>SHOW DETAILED DIRECTIONS</summary>
 <p>
 
 <ol>
@@ -200,22 +140,10 @@ Data is passed from a component higher in the app hierarchy to a child component
 
 </ol>
 
-![App.js](/readme-images/app-component-new-state.png)
-
-![FavoriteDogs.js](/readme-images/favorite-dogs-with-props.png)
-
 </p>
 </details>
 
 2. Ensure that once a dog is added to the FavoriteDogs component, it cannot be added again.
-
-<details><summary>SHOW CODE</summary>
-<p>
-
-![addDog-fn](/readme-images/addDog-filter.png)
-
-</p>
-</details>
 
 ## PART IV ##
 
