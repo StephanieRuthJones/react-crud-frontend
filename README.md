@@ -100,8 +100,6 @@ componentDidMount is called once the component has been rendered in the browser.
 
 4. Render DogCards in the Adoptable Dogs section in the browser.
 
-
-
 <details><summary>What is prop drilling?</summary>
 <p>
 
