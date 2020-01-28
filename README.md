@@ -40,11 +40,12 @@
 
 <details><summary>Show Component Hierarchy</summary>
     <p>
-        ![Component Hierarchy](images/componenthierarchy.png)
+        ![Component Hierarchy](/images/componenthierarchy.png)
     </p>
 </details>
 
-<details><summary>Where is state typically held?</summary>
+<details>
+<summary>Where is state typically held?</summary>
 <p>
 
 In the highest common component.
