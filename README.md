@@ -149,10 +149,6 @@ Data is passed from a component higher in the app hierarchy to a child component
 
 1. Add the following functionality: Clicking on a DogCard in the FavoriteDogs removes it from that component.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
 <details><summary>TRUE / FALSE: Two different functions can be given the same prop name when passed to child components.</summary>
 <p>
 
@@ -173,10 +169,6 @@ TRUE: You can give two different props the same name even if they reference diff
 
 </ol>
 
-![App.js](/readme-images/app-with-remove.png)
-
-![App.js](/readme-images/adoptable-dogs-new-props.png)
-
 </p>
 </details>
 
@@ -185,7 +177,7 @@ TRUE: You can give two different props the same name even if they reference diff
 1. Add functionality to SearchBar component: Typing in a form allows user to search by breed.
 
 <details>
-<summary>SHOW CODE</summary>
+<summary>SHOW DETAILED INSTRUCTIONS</summary>
 <p>
 
 <ol>
@@ -218,10 +210,6 @@ In the App component, write a function called updateSearchTerm that takes in a s
 
 </ol>
 
-![SearchBar.js](/readme-images/search-bar.png)
-
-![App.js](/readme-images/app-with-search.png)
-
 </p>
 </details>
 
@@ -248,15 +236,6 @@ Controlled forms: Input values are set to state values, then updated via events.
 
 4. Give first three inputs a value that references corresponding information AddDogForm state.
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
-![AddDogForm.js](/readme-images/add-dog-form-1.png)
-
-</p>
-</details>
-
 5. In the appropriate component, add an addAdoptableDog function that POSTs form data to the backend.
 
 6. Pass as props to the appropriate component.
@@ -274,31 +253,14 @@ The opposite is *optimistic rendering*, which renders the page with updated info
 </p>
 </details>
 
-<details>
-<summary>SHOW CODE</summary>
-<p>
-
-![addAdoptableDog](/readme-images/addAdoptableDog_function.png)
-
-</p>
-</details>
-
 8. Add an onSubmit handler to the AddDogForm component. The onSubmit should reference a submitHandler function that calls the addAdoptableDog function, then resets state to its original empty values.
 
-<details>
-<summary>SEE CODE</summary>
-<p>
-
-![AddDogForm.js](/readme-images/AddDogForm-submit-handleChange.png)
 
 <details>
 <summary>Why do we need event.preventDefault() in the submitHandler function?</summary>
 <p>
 
 This prevents the default submit action of reloading the webpage.
-</p>
-</details>
-
 </p>
 </details>
 
@@ -309,15 +271,6 @@ This prevents the default submit action of reloading the webpage.
 2. This function should delete a selected dog from the backend.
 
 3. Optimistically render the new array of adoptable dogs without the deleted dog.
-
-<details>
-<summary>SEE CODE</summary>
-<p>
-
-![App.js](/readme-images/deleteDog-fn.png)
-
-</p>
-</details>
 
 ## PART VIII ##
 
