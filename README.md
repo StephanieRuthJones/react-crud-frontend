@@ -140,17 +140,17 @@ Data is passed from a component higher in the app hierarchy to a child component
 
 <ol>
 
-<li>Add an empty favoriteDogs array to state in the App component.</li>
+    <li>Add an empty favoriteDogs array to state in the App component.</li>
 
-<li>Create an addDog function that adds a dog object to state.</li> 
+    <li>Create an addFavoriteDog function that adds a dog object to state.</li> 
 
-*Remember: Functions that CHANGE state have to live where state lives*
+    *Remember: Functions that CHANGE state have to live where state lives*
 
-<li>Pass the addDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
+    <li>Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
 
-<li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
+    <li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
 
-<li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
+    <li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
 
 </ol>
 
@@ -158,6 +158,12 @@ Data is passed from a component higher in the app hierarchy to a child component
 </details>
 
 2. Ensure that once a dog is added to the FavoriteDogs component, it cannot be added again.
+
+<details><summary>SHOW CODE</summary>
+    <img src="images/appPart2.png">
+    <img src="images/adoptableDogsPart2.png">
+    <img src="images/dogCardPart2.png">
+</details>
 
 ## PART IV ##
 

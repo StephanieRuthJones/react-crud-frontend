@@ -7,7 +7,8 @@ import { FavoriteDogs } from './components/FavoriteDogs'
 
 class App extends Component {
   state = {
-    dogs: []
+    dogs: [],
+    favoriteDogs: []
   }
 
   componentDidMount() {
