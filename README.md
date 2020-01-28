@@ -52,7 +52,7 @@ In the case of this app, App.js will hold state, as it is the parent to the othe
 
 Keep in mind: Not all apps need to hold state in App.js. An app's unique component structure dictates where the single source of truth should live.
 
-In larger apps, state management tools such as Redux are used as state containers.
+In larger apps, state management tools such as Redux are often used as state containers.
 
 </p>
 </details>
@@ -94,6 +94,11 @@ componentDidMount is called once the component has been rendered in the browser.
 4. Put the name of this app in an h1 tag in the Header component. Give it a className of "header". Make sure it renders in the UI.
 
 5. If you haven't already, start your app in the browser and make sure all components render without errors.
+
+<details><summary>Show Component Hierarchy</summary>
+    <img src="images/part1.png">
+    <img src="images/examplePart1Component.png">
+</details>
 
 ## PART II ##
 

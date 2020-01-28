@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import './App.css'
 
+import { Header } from './components/Header'
+import { AdoptableDogs } from './components/AdoptableDogs'
+import { FavoriteDogs } from './components/FavoriteDogs'
+
 class App extends Component {
   state = {
     dogs: []
@@ -11,10 +15,14 @@ class App extends Component {
       .then(response => response.json())
       .then(dogs => this.setState({ dogs }))
   }
+
   render() {
-    console.log(this.state)
     return (
-      <h1>App.js</h1>
+      <div>
+        <Header />
+        <FavoriteDogs />
+        <AdoptableDogs />
+      </div>
     )
   }
 
