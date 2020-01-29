@@ -194,35 +194,26 @@ TRUE: You can give two different props the same name even if they reference diff
 <summary>SHOW DETAILED INSTRUCTIONS</summary>
 <p>
 
-<ol>
+    In the App component, add searchTerm to state and assign it to an empty string. Pass it to the SearchBar component as props.
 
-<li>
-In the App component, add searchTerm to state and assign it to an empty string. Pass it to the SearchBar component as props.
-</li>
+    In the App component, write a function called updateSearchTerm that takes in a searchTerm and sets the searchTerm in state.
+    *Do you remember why this function belongs here and not in another component?*
 
-<li>
-In the App component, write a function called updateSearchTerm that takes in a searchTerm and sets the searchTerm in state.
-*Do you remember why this function belongs here and not in another component?*
-</li>
+    Pass the updateSearchTerm function to the SearchBar component as props.
 
-<li>Pass the updateSearchTerm function to the SearchBar component as props.</li>
+    Add a search input to SearchBar component.
 
-<li>Add a search input to SearchBar component.</li>
+    Give input a value of the searchTerm previously passed as props.
 
-<li>Give input a value of the searchTerm previously passed as props.</li>
+    Give input a placeholder of "Find Adoptable Dog".
 
-<li>Give input a placeholder of "Find Adoptable Dog".</li>
+    Add an onChange event listener to the input that references a function called "updateSearchTerm".
 
-<li>Add an onChange event listener to the input that references a function called "updateSearchTerm".</li>
+    In the SearchBar component, write the updateSearchTerm function that references the updateSearchTerm function written in the App component. It should take in event.target.value as its argument.
 
-<li>In the SearchBar component, write the updateSearchTerm function that references the updateSearchTerm function written in the App component. It should take in event.target.value as its argument.
-</li>
+    Create a filteredDogs function. (You determine where it should live.) Based on the searchTerm in state, this funciton should filter dogs by breed, name, and age.
 
-<li>Create a filteredDogs function. (You determine where it should live.) Based on the searchTerm in state, this funciton should filter dogs by breed, name, and age.</li>
-
- <li>Update adoptableDogs props sent to AdoptableDogs component to reference the filteredDogs function.</li>
-
-</ol>
+    Update adoptableDogs props sent to AdoptableDogs component to reference the filteredDogs function.
 
 </p>
 </details>
