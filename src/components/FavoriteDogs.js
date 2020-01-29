@@ -1,7 +1,14 @@
 import React from 'react'
-
-export const FavoriteDogs = () => {
+import { DogCard } from './DogCard'
+export const FavoriteDogs = ({ favoriteDogs, favDogAction }) => {
+    const dogCards = favoriteDogs.map(dog => {
+        return <DogCard key={dog.id} dog={dog} favDogAction={favDogAction}/>
+    })
     return (
-        <h1>FavoriteDogs</h1>
+
+        <div>
+            <h1>Favorite Dogs</h1>
+            {dogCards}
+        </div>
     )
 }
