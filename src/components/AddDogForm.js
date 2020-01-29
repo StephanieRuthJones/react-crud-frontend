@@ -1,13 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 class AddDogForm extends Component {
     state = {
-        newDog: {
-            name: "",
-            breed: "",
-            age: 0,
-            image: ""
-        }
+        name: "",
+        breed: "",
+        age: 0,
+        image: ""
     }
 
     submitHandler = event => {
@@ -17,19 +15,15 @@ class AddDogForm extends Component {
         this.props.addAdoptableDog({ name, breed, age, image })
 
         this.setState({
-            newDog: {
-                name: "",
-                breed: "",
-                age: 0,
-                image: ""
-            }
+            name: "",
+            breed: "",
+            age: 0,
+            image: ""
         })
     }
 
     handleChange = event => {
-        const { newDog } = this.state
-        newDog[event.target.name] = event.target.value
-        this.setState({ newDog })
+        this.setState({ [event.target.name]: event.target.value })
     }
 
     render() {
