@@ -136,7 +136,7 @@ Data is passed from a component higher in the app hierarchy to a child component
 <summary>SHOW DETAILED DIRECTIONS</summary>
 <p>
 
-    <ol>
+  
 
         Add an empty favoriteDogs array to state in the App component.
 
@@ -144,13 +144,13 @@ Data is passed from a component higher in the app hierarchy to a child component
 
         *Remember: Functions that CHANGE state have to live where state lives*
 
-        <li>Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
+        Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.
 
-        <li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
+        Pass the favoriteDogs array in state to the FavoriteDogs component.
 
-        <li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
+        Create an array of DogCard components and render them in the FavoriteDogs component.
 
-    </ol>
+   
 
 </p>
 </details>
