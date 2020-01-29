@@ -223,6 +223,10 @@ TRUE: You can give two different props the same name even if they reference diff
 </p>
 </details>
 
+<details><summary>SHOW CODE</summary>
+    <img src="images/appPart4.png">
+</details>
+
 ## PART VI ##
 
 1. Create a controlled form in AddDogForm that allows a user to add an adoptable dog to the list. It should have four inputs:
