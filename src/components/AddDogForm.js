@@ -80,3 +80,5 @@ class AddDogForm extends Component {
         )
     }
 }
+
+export default AddDogForm
