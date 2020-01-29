@@ -175,6 +175,9 @@ TRUE: You can give two different props the same name even if they reference diff
 </p>
 </details>
 
+<details><summary>SHOW DETAILED STEPS</summary>
+<p>
+
 1. Write a removeFavoriteDog function that removes the selected dog from the favoriteDogs array in state.
 
 1. Change the name of AdoptableDogs component's addDog prop to dogAction. 
@@ -182,6 +185,9 @@ TRUE: You can give two different props the same name even if they reference diff
 1. Pass removeFavoriteDog function as a prop called dogAction to the FavoriteDogs component. 
 
 1. Pass dogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.) 
+
+</p>
+</details>
 
 ## PART V ##
 
