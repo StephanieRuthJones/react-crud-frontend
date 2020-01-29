@@ -78,8 +78,6 @@ Stateful components must be class components.
 
 2. Fetch data from `https://dogs-backend.herokuapp.com/dogs` and put returned data in state.
 
-
-
 <details>
 <summary>Why is the GET request inside the ComponentDidMount() lifecycle method? Use React docs and google to answer this question.</summary>
 <p>
@@ -130,7 +128,7 @@ Data is passed from a component higher in the app hierarchy to a child component
     <img src="images/dogCardPart2.png">
 </details>
 
-## PART III ## 
+## PART III ##
 
 1. Add the following functionality: Clicking on a DogCard in the AdoptableDogs component adds it to FavoriteDogs component.
 
@@ -138,31 +136,29 @@ Data is passed from a component higher in the app hierarchy to a child component
 <summary>SHOW DETAILED DIRECTIONS</summary>
 <p>
 
-<ol>
+  
 
-    <li>Add an empty favoriteDogs array to state in the App component.</li>
+        Add an empty favoriteDogs array to state in the App component.
 
-    <li>Create an addFavoriteDog function that adds a dog object to state.</li> 
+        Create an addFavoriteDog function that adds a dog object to state. 
 
-    *Remember: Functions that CHANGE state have to live where state lives*
+        *Remember: Functions that CHANGE state have to live where state lives*
 
-    <li>Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
+        Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.
 
-    <li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
+        Pass the favoriteDogs array in state to the FavoriteDogs component.
 
-    <li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
-
-</ol>
+        Create an array of DogCard components and render them in the FavoriteDogs component.
 
 </p>
 </details>
 
 2. Ensure that once a dog is added to the FavoriteDogs component, it cannot be added again.
 
-<details><summary>SHOW CODE</summary>
-    <img src="images/appPart2.png">
-    <img src="images/adoptableDogsPart2.png">
-    <img src="images/dogCardPart2.png">
+<details>
+    <summary>SHOW CODE</summary>
+    <img src="images/appPart3AddFavDog.png">
+    <img src="images/dogCardPart3.png">
 </details>
 
 ## PART IV ##
@@ -177,19 +173,22 @@ TRUE: You can give two different props the same name even if they reference diff
 </p>
 </details>
 
-<ol>
+<details><summary>SHOW DETAILED STEPS</summary>
+<p>
 
-<li>Write a removeDog function that removes the selected dog from the favoriteDogs array in state.</li>
+1. Write a removeFavoriteDog function that removes the selected dog from the favoriteDogs array in state.
 
-<li>Change the name of AdoptableDogs component's addDog prop to dogAction.</li> 
+1. Change the name of AdoptableDogs component's addDog prop to dogAction. 
 
-<li>Pass removeDog function as a prop called dogAction to the FavoriteDogs component.</li> 
+1. Pass removeFavoriteDog function as a prop called dogAction to the FavoriteDogs component. 
 
-<li>Pass dogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.)</li> 
-
-</ol>
+1. Pass favDogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.) 
 
 </p>
+</details>
+
+<details><summary>SHOW CODE</summary>
+    <img src="images/appPart4.png">
 </details>
 
 ## PART V ##
@@ -200,37 +199,32 @@ TRUE: You can give two different props the same name even if they reference diff
 <summary>SHOW DETAILED INSTRUCTIONS</summary>
 <p>
 
-<ol>
+    In the App component, add searchTerm to state and assign it to an empty string. Pass it to the SearchBar component as props.
 
-<li>
-In the App component, add searchTerm to state and assign it to an empty string. Pass it to the SearchBar component as props.
-</li>
+    In the App component, write a function called updateSearchTerm that takes in a searchTerm and sets the searchTerm in state.
+    *Do you remember why this function belongs here and not in another component?*
 
-<li>
-In the App component, write a function called updateSearchTerm that takes in a searchTerm and sets the searchTerm in state.
-*Do you remember why this function belongs here and not in another component?*
-</li>
+    Pass the updateSearchTerm function to the SearchBar component as props.
 
-<li>Pass the updateSearchTerm function to the SearchBar component as props.</li>
+    Add a search input to SearchBar component.
 
-<li>Add a search input to SearchBar component.</li>
+    Give input a value of the searchTerm previously passed as props.
 
-<li>Give input a value of the searchTerm previously passed as props.</li>
+    Give input a placeholder of "Find Adoptable Dog".
 
-<li>Give input a placeholder of "Find Adoptable Dog".</li>
+    Add an onChange event listener to the input that references a function called "updateSearchTerm".
 
-<li>Add an onChange event listener to the input that references a function called "updateSearchTerm".</li>
+    In the SearchBar component, write the updateSearchTerm function that references the updateSearchTerm function written in the App component. It should take in event.target.value as its argument.
 
-<li>In the SearchBar component, write the updateSearchTerm function that references the updateSearchTerm function written in the App component. It should take in event.target.value as its argument.
-</li>
+    Create a filteredDogs function. (You determine where it should live.) Based on the searchTerm in state, this funciton should filter dogs by breed, name, and age.
 
-<li>Create a filteredDogs function. (You determine where it should live.) Based on the searchTerm in state, this funciton should filter dogs by breed, name, and age.</li>
-
- <li>Update adoptableDogs props sent to AdoptableDogs component to reference the filteredDogs function.</li>
-
-</ol>
+    Update adoptableDogs props sent to AdoptableDogs component to reference the filteredDogs function.
 
 </p>
+</details>
+
+<details><summary>SHOW CODE</summary>
+    <img src="images/appPart4.png">
 </details>
 
 ## PART VI ##
