@@ -93,11 +93,6 @@ componentDidMount is called once the component has been rendered in the browser.
 
 5. If you haven't already, start your app in the browser and make sure all components render without errors.
 
-<details><summary>SHOW CODE</summary>
-    <img src="images/part1.png">
-    <img src="images/examplePart1Component.png">
-</details>
-
 ## PART II ##
 
 1. Pass state to AdoptableDogs component as props.
@@ -121,12 +116,6 @@ Data is passed from a component higher in the app hierarchy to a child component
 5. Create an HTML card in the DogCard component. It should be wrapped by a div with the className "dog-card". The dog-card div should have two children: (1) An img tag that displays the dog's image and (2) a div with the className "dog-specs". 
 
 6. The dog-specs div has two children: (1) h4 tag that displays the dog's name and (2) a p tag that displays the dog's breed.
-
-<details><summary>SHOW CODE</summary>
-    <img src="images/appPart2.png">
-    <img src="images/adoptableDogsPart2.png">
-    <img src="images/dogCardPart2.png">
-</details>
 
 ## PART III ##
 
@@ -155,12 +144,6 @@ Data is passed from a component higher in the app hierarchy to a child component
 
 2. Ensure that once a dog is added to the FavoriteDogs component, it cannot be added again.
 
-<details>
-    <summary>SHOW CODE</summary>
-    <img src="images/appPart3AddFavDog.png">
-    <img src="images/dogCardPart3.png">
-</details>
-
 ## PART IV ##
 
 1. Add the following functionality: Clicking on a DogCard in the FavoriteDogs removes it from that component.
@@ -185,10 +168,6 @@ TRUE: You can give two different props the same name even if they reference diff
 1. Pass favDogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.) 
 
 </p>
-</details>
-
-<details><summary>SHOW CODE</summary>
-    <img src="images/appPart4.png">
 </details>
 
 ## PART V ##
@@ -221,10 +200,6 @@ TRUE: You can give two different props the same name even if they reference diff
     Update adoptableDogs props sent to AdoptableDogs component to reference the filteredDogs function.
 
 </p>
-</details>
-
-<details><summary>SHOW CODE</summary>
-    <img src="images/appPart4.png">
 </details>
 
 ## PART VI ##
