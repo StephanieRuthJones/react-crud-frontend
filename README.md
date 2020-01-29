@@ -150,8 +150,6 @@ Data is passed from a component higher in the app hierarchy to a child component
 
         Create an array of DogCard components and render them in the FavoriteDogs component.
 
-   
-
 </p>
 </details>
 
@@ -184,9 +182,13 @@ TRUE: You can give two different props the same name even if they reference diff
 
 1. Pass removeFavoriteDog function as a prop called dogAction to the FavoriteDogs component. 
 
-1. Pass dogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.) 
+1. Pass favDogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.) 
 
 </p>
+</details>
+
+<details><summary>SHOW CODE</summary>
+    <img src="images/appPart4.png">
 </details>
 
 ## PART V ##

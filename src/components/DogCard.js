@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const DogCard = ({ addFavoriteDog, dog }) => {
+export const DogCard = ({ favDogAction, dog }) => {
     const handleClick = () => {
         console.log("clicked")
-        addFavoriteDog(dog)
+        favDogAction(dog)
     }
     return (
         <div

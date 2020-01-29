@@ -18,7 +18,16 @@ class App extends Component {
   }
 
   addFavoriteDog = dog => {
-    this.setState({ favoriteDogs: [...this.state.favoriteDogs, dog] })
+    if (!this.state.favoriteDogs.includes(dog)) {
+      this.setState({ favoriteDogs: [...this.state.favoriteDogs, dog] })
+    }
+  }
+
+  removeFavoriteDog = dog => {
+    const newFavoriteDogs = this.state.favoriteDogs.filter(favDog => {
+      return favDog !== dog
+    })
+    this.setState({ favoriteDogs: newFavoriteDogs })
   }
 
   render() {
@@ -26,8 +35,14 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <FavoriteDogs favoriteDogs={this.state.favoriteDogs} />
-        <AdoptableDogs addFavoriteDog={this.addFavoriteDog} dogs={this.state.dogs} />
+        <FavoriteDogs
+          favDogAction={this.removeFavoriteDog}
+          favoriteDogs={this.state.favoriteDogs}
+        />
+        <AdoptableDogs
+          favDogAction={this.addFavoriteDog}
+          dogs={this.state.dogs}
+        />
       </div>
     )
   }
