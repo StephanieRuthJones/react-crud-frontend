@@ -78,8 +78,6 @@ Stateful components must be class components.
 
 2. Fetch data from `https://dogs-backend.herokuapp.com/dogs` and put returned data in state.
 
-
-
 <details>
 <summary>Why is the GET request inside the ComponentDidMount() lifecycle method? Use React docs and google to answer this question.</summary>
 <p>
@@ -130,7 +128,7 @@ Data is passed from a component higher in the app hierarchy to a child component
     <img src="images/dogCardPart2.png">
 </details>
 
-## PART III ## 
+## PART III ##
 
 1. Add the following functionality: Clicking on a DogCard in the AdoptableDogs component adds it to FavoriteDogs component.
 
@@ -138,21 +136,21 @@ Data is passed from a component higher in the app hierarchy to a child component
 <summary>SHOW DETAILED DIRECTIONS</summary>
 <p>
 
-<ol>
+    <ol>
 
-    <li>Add an empty favoriteDogs array to state in the App component.</li>
+        Add an empty favoriteDogs array to state in the App component.
 
-    <li>Create an addFavoriteDog function that adds a dog object to state.</li> 
+        Create an addFavoriteDog function that adds a dog object to state. 
 
-    *Remember: Functions that CHANGE state have to live where state lives*
+        *Remember: Functions that CHANGE state have to live where state lives*
 
-    <li>Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
+        <li>Pass the addFavoriteDog function as props to the AdoptableDogs component, then to the DogCard component.</li>
 
-    <li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
+        <li>Pass the favoriteDogs array in state to the FavoriteDogs component.</li>
 
-    <li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
+        <li>Create an array of DogCard components and render them in the FavoriteDogs component.</li>
 
-</ol>
+    </ol>
 
 </p>
 </details>
@@ -177,17 +175,17 @@ TRUE: You can give two different props the same name even if they reference diff
 </p>
 </details>
 
-<ol>
+    <ol>
 
-<li>Write a removeFavoriteDog function that removes the selected dog from the favoriteDogs array in state.</li>
+        <li>Write a removeFavoriteDog function that removes the selected dog from the favoriteDogs array in state.</li>
 
-<li>Change the name of AdoptableDogs component's addDog prop to dogAction.</li> 
+        <li>Change the name of AdoptableDogs component's addDog prop to dogAction.</li> 
 
-<li>Pass removeFavoriteDog function as a prop called dogAction to the FavoriteDogs component.</li> 
+        <li>Pass removeFavoriteDog function as a prop called dogAction to the FavoriteDogs component.</li> 
 
-<li>Pass dogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.)</li> 
+        <li>Pass dogAction down to DogCard. (Change props names in AdoptableDogs and DogCard components as needed.)</li> 
 
-</ol>
+    </ol>
 
 </p>
 </details>

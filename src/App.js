@@ -17,13 +17,17 @@ class App extends Component {
       .then(dogs => this.setState({ dogs }))
   }
 
+  addFavoriteDog = dog => {
+    this.setState({ favoriteDogs: [...this.state.favoriteDogs, dog] })
+  }
+
   render() {
-    console.log(this.state.dogs)
+    console.log(this.state.favoriteDogs)
     return (
       <div>
         <Header />
-        <FavoriteDogs />
-        <AdoptableDogs dogs={this.state.dogs} />
+        <FavoriteDogs favoriteDogs={this.state.favoriteDogs} />
+        <AdoptableDogs addFavoriteDog={this.addFavoriteDog} dogs={this.state.dogs} />
       </div>
     )
   }
