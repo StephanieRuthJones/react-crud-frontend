@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import Header from './components/Header'
+import { Header } from './components/Header'
 import FavoriteDogs from './components/FavoriteDogs'
 import SearchBar from './components/SearchBar'
 import AdoptableDogs from './components/AdoptableDogs'

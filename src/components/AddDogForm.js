@@ -10,7 +10,7 @@ class AddDogForm extends Component {
 
     submitHandler = event => {
         event.preventDefault()
-        const { name, breed, age, image } = this.state.newDog
+        const { name, breed, age, image } = this.state
 
         this.props.addAdoptableDog({ name, breed, age, image })
 
@@ -27,7 +27,7 @@ class AddDogForm extends Component {
     }
 
     render() {
-        const { name, breed, age, image } = this.state.newDog
+        const { name, breed, age, image } = this.state
 
         return (
             <form className="add-dog-form"
