@@ -1,6 +1,10 @@
 import React from 'react'
 import './App.css'
 
+//fork and clone repo in slack
+//cd into repo
+//npm install
+
 function App() {
 
   return (
