@@ -1,14 +1,26 @@
 import React from 'react'
-import { DogCard } from './DogCard'
+import DogCard from './DogCard'
 
-export const AdoptableDogs = ({ dogs }) => {
-    const dogCards = dogs.map(dog => {
-        return <DogCard key={dog.id} dog={dog} />
+const AdoptableDogs = (props) => {
+
+    const adoptableDogs = props.adoptableDogs.map(dog => {
+        return <DogCard
+            dogAction={props.dogAction}
+            deleteDog={props.deleteDog}
+            key={dog.id}
+            dog={dog}
+        />
     })
+
     return (
-        <div>
-            <h1>AdoptableDogs</h1>
-            {dogCards}
+        <div className="dogs">
+            <h1 className="header">Adoptable Dogs</h1>
+            <div className="adoptable-dogs">
+                {adoptableDogs}
+            </div>
         </div>
     )
 }
+
+export default AdoptableDogs
+
