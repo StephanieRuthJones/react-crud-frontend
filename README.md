@@ -186,6 +186,9 @@ TRUE: You can give two different props the same name even if they reference diff
 </p>
 </details>
 
+</p>
+</details>
+
 ## PART V ##
 
 1. Add functionality to SearchBar component: Typing in a form allows user to search by breed.
