@@ -157,10 +157,10 @@ Data is passed from a component higher in the app hierarchy to a child component
 
 2. Ensure that once a dog is added to the FavoriteDogs component, it cannot be added again.
 
-<details><summary>SHOW CODE</summary>
-    <img src="images/appPart2.png">
-    <img src="images/adoptableDogsPart2.png">
-    <img src="images/dogCardPart2.png">
+<details>
+    <summary>SHOW CODE</summary>
+    <img src="images/appPart3AddFavDog.png">
+    <img src="images/dogCardPart3.png">
 </details>
 
 ## PART IV ##
