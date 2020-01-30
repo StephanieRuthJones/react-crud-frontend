@@ -125,8 +125,6 @@ Data is passed from a component higher in the app hierarchy to a child component
 <summary>SHOW DETAILED DIRECTIONS</summary>
 <p>
 
-  
-
         Add an empty favoriteDogs array to state in the App component.
 
         Create an addFavoriteDog function that adds a dog object to state. 
@@ -142,7 +140,7 @@ Data is passed from a component higher in the app hierarchy to a child component
 </p>
 </details>
 
-2. Ensure that once a dog is added to the FavoriteDogs component, it cannot be added again.
+2. Ensure that once a dog is added to the FavoriteDogs component it cannot be added again.
 
 ## PART IV ##
 

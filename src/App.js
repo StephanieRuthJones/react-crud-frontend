@@ -6,6 +6,7 @@ import { AdoptableDogs } from './components/AdoptableDogs'
 import { FavoriteDogs } from './components/FavoriteDogs'
 
 const BASE_URL = 'https://dogs-backend.herokuapp.com/dogs'
+
 class App extends Component {
   state = {
     dogs: [],
@@ -20,7 +21,6 @@ class App extends Component {
 
   //add fav dog => no duplicates
   addFavoriteDog = dog => {
-    console.log("adddog", dog)
     this.setState({ favoriteDogs: [...this.state.favoriteDogs, dog] })
   }
 
