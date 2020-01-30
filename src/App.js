@@ -4,13 +4,15 @@ import './App.css'
 import { Header } from './components/Header'
 import { AdoptableDogs } from './components/AdoptableDogs'
 import { FavoriteDogs } from './components/FavoriteDogs'
+import { SearchBar } from './components/SearchBar'
 
 const BASE_URL = 'https://dogs-backend.herokuapp.com/dogs'
 
 class App extends Component {
   state = {
     dogs: [],
-    favoriteDogs: []
+    favoriteDogs: [],
+    searchTerm: ""
   }
 
   componentDidMount() {
@@ -18,10 +20,24 @@ class App extends Component {
       .then(response => response.json())
       .then(dogs => this.setState({ dogs }))
   }
+//CHALLENGE: search by name, breed, AND age
+  filteredDogs = () => {
+    const { dogs, searchTerm } = this.state
+    return dogs.filter(dog => {
+      return dog.name.toLowerCase().includes(searchTerm.toLowerCase())
+    })
+  }
 
-  //add fav dog => no duplicates
+  //AddDogForm component => needs to be able to add a new dog
+
+  updateSearchTerm = term => {
+    this.setState({ searchTerm: term })
+  }
+
   addFavoriteDog = dog => {
-    this.setState({ favoriteDogs: [...this.state.favoriteDogs, dog] })
+    if (!this.state.favoriteDogs.includes(dog)) {
+      this.setState({ favoriteDogs: [...this.state.favoriteDogs, dog] })
+    }
   }
 
   removeFavoriteDog = dog => {
@@ -32,7 +48,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("state", this.state.favoriteDogs)
     return (
       <div className="App" >
         <Header />
@@ -40,9 +55,13 @@ class App extends Component {
           favoriteDogs={this.state.favoriteDogs}
           favDogAction={this.removeFavoriteDog}
         />
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          updateSearchTerm={this.updateSearchTerm}
+        />
         <AdoptableDogs
           favDogAction={this.addFavoriteDog}
-          dogs={this.state.dogs}
+          dogs={this.filteredDogs()}
         />
       </div>
     )
