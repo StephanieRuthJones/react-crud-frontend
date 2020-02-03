@@ -1,9 +1,15 @@
 import React from 'react'
-import { DogCard } from './DogCard'
+import DogCard from './DogCard'
 
-export const AdoptableDogs = ({ dogs, favDogAction }) => {
+export const AdoptableDogs = ({ dogs, favDogAction, deleteAdoptableDog, handleSubmit }) => {
     const dogCards = dogs.map(dog => {
-        return <DogCard key={dog.id} dog={dog} favDogAction={favDogAction} />
+        return <DogCard
+            key={dog.id}
+            dog={dog}
+            favDogAction={favDogAction}
+            deleteAdoptableDog={deleteAdoptableDog}
+            handleSubmit={handleSubmit}
+        />
     })
     return (
         <div>
